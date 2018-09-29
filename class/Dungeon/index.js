@@ -16,4 +16,7 @@ export default class Dungeon {
   movePC(newLocation) {
     this.playerLocation = newLocation;
   }
+  isLocationValid([newX, newY]) {
+    return !!this.layout[newX][newY];
+  }
 }

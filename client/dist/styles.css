@@ -1,0 +1,15 @@
+body {
+  background: black;
+}
+td.mini-map {
+  height: 2em;
+  width: 5em;
+}
+
+td.mini-map.room {
+  background: blue;
+}
+
+td.mini-map.room.player-occupied {
+  background: white;
+}

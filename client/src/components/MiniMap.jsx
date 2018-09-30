@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import MiniMapRow from './MiniMapRow';
 
 const MiniMap = ({ layout, playerLocation: [pcX, pcY] }) => (
-  <table>
+  <table className="mini-map wrapper">
     <tbody>
     {layout.map((row, i) => <MiniMapRow layout={row} playerLocation={(i === pcX) ? pcY : null} />)}
     </tbody>

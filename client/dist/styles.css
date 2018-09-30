@@ -1,9 +1,17 @@
 body {
   background: black;
 }
+
+.status-bar{
+  height: 18em;
+  position: absolute;
+}
+.mini-map.wrapper{
+  width:  30%;
+}
 td.mini-map {
-  height: 2em;
-  width: 5em;
+  height: 1vh;
+  width: 20vh;
 }
 
 td.mini-map.room {

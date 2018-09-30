@@ -4,7 +4,7 @@ import A from './A';
 export default class Eagle extends Dungeon {
   constructor() {
     super();
-    this.playerLocation = [5, 2];
+    this.playerLocation = [5, 3];
     this.layout = [
       [null, null, 'A', 'B', null, null, null, null],
       [null, null, null, 'C', null, 'D', 'E', null],

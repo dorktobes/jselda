@@ -12,9 +12,20 @@ export default class Dungeon {
     this.playerLocation = [];
     this.layout = [];
     this.tiles = {};
+    this.currentRoom = null;
   }
   movePC(newLocation) {
     this.playerLocation = newLocation;
+    this.changeRoom();
+  }
+  changeRoom() {
+    const [playerX, playerY] = this.playerLocation;
+    const currentTile = this.layout[playerX][playerY];
+    const Tile = this.tiles[currentTile];
+    if (!this.tiles[currentTile].layout) {
+      this.tiles[currentTile] = new Tile();
+    }
+    this.currentRoom = this.tiles[currentTile];
   }
   isLocationValid([newX, newY]) {
     return !!this.layout[newX][newY];

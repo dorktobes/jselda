@@ -1,5 +1,5 @@
 import Dungeon from './../Dungeon/';
-import A from './A';
+import P from './P';
 
 export default class Eagle extends Dungeon {
   constructor() {
@@ -14,7 +14,9 @@ export default class Eagle extends Dungeon {
       [null, null, 'O', 'P', 'Q', null, null, null],
     ];
     this.tiles = {
-      A,
+      P,
     };
+
+    this.changeRoom();
   }
 }

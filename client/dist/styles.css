@@ -1,10 +1,30 @@
 body {
   background: black;
 }
-
-.status-bar{
-  height: 18em;
+.game-board-wrapper{
   position: absolute;
+}
+
+.game-board-tile{
+  width: 8.33vw;
+  height: 11vh;
+  background: grey;
+}
+
+.game-board-tile.D{
+  background: brown;
+}
+.game-board-tile.T{
+  background: grey;
+}
+.game-board-tile.S1R{
+  background: red;
+}
+.game-board-tile.S2L{
+  background: orange;
+}
+.status-bar{
+  height: 20vh;
 }
 .mini-map.wrapper{
   width:  30%;

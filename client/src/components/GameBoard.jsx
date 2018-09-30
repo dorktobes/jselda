@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 import GameBoardRow from './GameBoardRow';
 
 const GameBoard = ({ layout }) => (
-  <table>
-    <tbody>
-      {layout.map(row => <GameBoardRow layout={row} />)}
-    </tbody>
-  </table>
+  <div className="game-board-wrapper">
+    <table>
+      <tbody>
+        {layout.map(row => <GameBoardRow layout={row} />)}
+      </tbody>
+    </table>
+  </div>
 );
 
 GameBoard.propTypes = {

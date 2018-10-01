@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import StatusBar from './StatusBar';
-import MiniMap from './MiniMap';
+import MiniMap from './MiniMap/MiniMap';
 
-import GameBoard from './GameBoard';
+import GameBoard from './GameBoard/GameBoard';
 
 class App extends Component {
   constructor(props) {
@@ -19,7 +19,10 @@ class App extends Component {
     return (
       <div>
         <StatusBar>
-          <MiniMap playerLocation={this.state.View.playerLocation} layout={this.state.View.layout} />
+          <MiniMap
+            playerLocation={this.state.View.playerLocation}
+            layout={this.state.View.layout}
+          />
         </StatusBar>
         <GameBoard layout={this.state.View.currentRoom.layout} />
       </div>

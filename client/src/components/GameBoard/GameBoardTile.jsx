@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import textures from './textures';
+import textures from '../textures';
 
 
 const GameBoardTile = ({ type }) => {

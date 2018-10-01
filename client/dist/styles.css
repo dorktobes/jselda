@@ -4,10 +4,14 @@ body {
 .game-board-wrapper{
   position: absolute;
 }
+.game-board-wrapper > table{
+  border-collapse: separate;
+  border-spacing: 0px 0px;
+}
 
-.game-board-tile{
-  width: 8.33vw;
-  height: 11vh;
+/*.game-board-tile{
+  width: 75px;
+  height: 75px;
   background: grey;
 }
 
@@ -18,11 +22,15 @@ body {
   background: grey;
 }
 .game-board-tile.S1R{
-  background: red;
+  background-image: url("https://vignette.wikia.nocookie.net/fantendo/images/f/f7/Left_Statue.png/revision/latest?cb=20150113111013");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
-.game-board-tile.S2L{
-  background: orange;
-}
+.S2L{
+  background-image: url("https://vignette.wikia.nocookie.net/fantendo/images/a/ae/Right_Statue.png/revision/latest?cb=20150113111026");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}*/
 .status-bar{
   height: 20vh;
 }
@@ -41,3 +49,18 @@ td.mini-map.room {
 td.mini-map.room.player-occupied {
   background: white;
 }
+
+.game-board-tile {
+  content: "";
+  float: left;
+  width: 32px;
+  height: 28px;
+  
+  background: url(images/texture-map.png);
+  background-size: 3000%;
+}
+
+/*.game-board-tile.T { background-position: -94px -48px; }
+.game-board-tile.D { background-position: -126px -48px; }
+.game-board-tile.S1R { background-position: -190px -80px; }
+.game-board-tile.S2L { background-position: -208px -80px; }*/

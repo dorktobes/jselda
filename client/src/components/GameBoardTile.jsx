@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const GameBoardTile = ({ type }) => <td className={`game-board-tile ${type}`} />;
+import textures from './textures';
+
+
+const GameBoardTile = ({ type }) => {
+  const Tile = textures[type];
+
+  return <Tile />;
+};
 
 GameBoardTile.propTypes = {
   type: PropTypes.string.isRequired,

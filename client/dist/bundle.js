@@ -166,7 +166,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _propTypes = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n\nvar _propTypes2 = _interopRequireDefault(_propTypes);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar GameBoardTile = function GameBoardTile(_ref) {\n  var type = _ref.type;\n  return _react2.default.createElement('td', { className: 'game-board-tile ' + type });\n};\n\nGameBoardTile.propTypes = {\n  type: _propTypes2.default.string.isRequired\n};\n\nexports.default = GameBoardTile;\n\n//# sourceURL=webpack:///./client/src/components/GameBoardTile.jsx?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _propTypes = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n\nvar _propTypes2 = _interopRequireDefault(_propTypes);\n\nvar _textures = __webpack_require__(/*! ./textures */ \"./client/src/components/textures/index.js\");\n\nvar _textures2 = _interopRequireDefault(_textures);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar GameBoardTile = function GameBoardTile(_ref) {\n  var type = _ref.type;\n\n  var Tile = _textures2.default[type];\n\n  return _react2.default.createElement(Tile, null);\n};\n\nGameBoardTile.propTypes = {\n  type: _propTypes2.default.string.isRequired\n};\n\nexports.default = GameBoardTile;\n\n//# sourceURL=webpack:///./client/src/components/GameBoardTile.jsx?");
 
 /***/ }),
 
@@ -215,6 +215,42 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 
 "use strict";
 eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _propTypes = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n\nvar _propTypes2 = _interopRequireDefault(_propTypes);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return call && (typeof call === \"object\" || typeof call === \"function\") ? call : self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function, not \" + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }\n\nvar StatusBar = function (_Component) {\n  _inherits(StatusBar, _Component);\n\n  function StatusBar() {\n    _classCallCheck(this, StatusBar);\n\n    return _possibleConstructorReturn(this, (StatusBar.__proto__ || Object.getPrototypeOf(StatusBar)).apply(this, arguments));\n  }\n\n  _createClass(StatusBar, [{\n    key: 'render',\n    value: function render() {\n      return _react2.default.createElement(\n        'div',\n        { className: 'status-bar' },\n        {...this.props.children}\n      );\n    }\n  }]);\n\n  return StatusBar;\n}(_react.Component);\n\nStatusBar.propTypes = {};\n\nexports.default = StatusBar;\n\n//# sourceURL=webpack:///./client/src/components/StatusBar.jsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/textures/index.js":
+/*!*************************************************!*\
+  !*** ./client/src/components/textures/index.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _textureFactory = __webpack_require__(/*! ./textureFactory */ \"./client/src/components/textures/textureFactory.jsx\");\n\nvar _textureFactory2 = _interopRequireDefault(_textureFactory);\n\nvar _textureStyles = __webpack_require__(/*! ./textureStyles */ \"./client/src/components/textures/textureStyles.js\");\n\nvar styles = _interopRequireWildcard(_textureStyles);\n\nfunction _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = Object.keys(styles).reduce(function (acc, style) {\n  acc[style] = (0, _textureFactory2.default)(styles[style]);\n  return acc;\n}, {});\n\n//# sourceURL=webpack:///./client/src/components/textures/index.js?");
+
+/***/ }),
+
+/***/ "./client/src/components/textures/textureFactory.jsx":
+/*!***********************************************************!*\
+  !*** ./client/src/components/textures/textureFactory.jsx ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _react = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar _react2 = _interopRequireDefault(_react);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = function (style) {\n  return function () {\n    return _react2.default.createElement(\"td\", { className: \"game-board-tile\", style: style });\n  };\n};\n\n//# sourceURL=webpack:///./client/src/components/textures/textureFactory.jsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/textures/textureStyles.js":
+/*!*********************************************************!*\
+  !*** ./client/src/components/textures/textureStyles.js ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar T = exports.T = { 'background-position': '-94px -48px' };\nvar D = exports.D = { 'background-position': '-126px -48px' };\nvar S1R = exports.S1R = { 'background-position': '-190px -80px' };\nvar S2L = exports.S2L = { 'background-position': '-208px -80px' };\n\n//# sourceURL=webpack:///./client/src/components/textures/textureStyles.js?");
 
 /***/ }),
 
